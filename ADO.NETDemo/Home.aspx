@@ -84,12 +84,14 @@
         </div>        
         <div class="container">
             <h1 class="text-center">Products Details Table <hr style="width:500px;" /></h1>
-            <asp:GridView ID="GridView1" CssClass="text-center" runat="server" Width="100%" AutoGenerateColumns="False" DataKeyNames="pid" DataSourceID="SqlDataSource1" AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="GridView1" CssClass="text-center" runat="server" Width="100%" AutoGenerateColumns="False" DataKeyNames="pid" DataSourceID="SqlDataSource1" AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None" AllowSorting="True">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:BoundField DataField="pid" HeaderText="Product Id" InsertVisible="False" ReadOnly="True" SortExpression="pid" />
                     <asp:BoundField DataField="pname" HeaderText="Product Name" SortExpression="pname" />
                     <asp:BoundField DataField="cost" HeaderText="Product Price" SortExpression="cost" />
+                    <asp:HyperLinkField HeaderText="Edit" Text="Edit" />
+                    <asp:HyperLinkField HeaderText="Delete" Text="Delete" />
                 </Columns>
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
